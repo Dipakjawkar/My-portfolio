@@ -365,5 +365,9 @@ a{
         scale: 0.7;
         left: -55px;
     }
+
+     .p-container{
+        left: 20%;
+    }
     
 }
