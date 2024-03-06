@@ -27,9 +27,23 @@
                     <div class="u-id">dipakjawkar9890@gmail.com</div>
                     <div class="u-social">
                         <ul>
-                            <li><img src="./src/img/x_app_img.png" alt="x app"></li>
-                            <li><img src="./src/img/linkdin_img.png" alt="linkdin app"></li>
-                            <li><img class="img-invert" src="./src/img/github_img.png" alt="github app"></li>
+                            <li>
+                                <a href="https://x.com/DipakJawkar">
+
+
+                                    <img src="./src/img/x_app_img.png" alt="x app">
+
+                                </a>
+                            </li>
+
+
+                            <li> <a href="https://www.linkedin.com/in/dipak-jawkar"><img src="./src/img/linkdin_img.png"
+                                        alt="linkdin app"></a>
+
+                            </li>
+
+                            <li> <a href="https://github.com/Dipakjawkar"><img class="img-invert"
+                                        src="./src/img/github_img.png" alt="github app"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +98,7 @@
             </div>
             <div class="next-section-2">
                 <h1 id="projects-name">PROJECTS</h1>
-                <div class="p-container" >
+                <div class="p-container">
                     <div class="project-bar" id="projects">
                     </div>
                 </div>
@@ -109,16 +123,16 @@
             "git": "https://github.com/Dipakjawkar/realtime-chatapp",
             "live": "NA"
         },
-      
-       
+
+
     ]
 
     const projectsContainer = document.getElementById("projects");
 
-projects.forEach((project) => {
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("project");
-    newDiv.innerHTML = `
+    projects.forEach((project) => {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("project");
+        newDiv.innerHTML = `
         <div class="dot"></div>
         <div class="p-info">
             <h1>${project.name}</h1>
@@ -126,8 +140,8 @@ projects.forEach((project) => {
             <p>LIVE : </p><a href="${project.live}">${project.live}</a>
         </div>
     `;
-    projectsContainer.appendChild(newDiv);
-});
+        projectsContainer.appendChild(newDiv);
+    });
 
 
 </script>
