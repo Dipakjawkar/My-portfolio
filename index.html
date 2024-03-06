@@ -37,7 +37,7 @@
         </div>
         <div class="lower">
             <div class="next-btn">
-                <h1>SKILLS</h1>
+                <h1 id="skills-name">SKILLS</h1>
                 <div class="skills">
                     <div class="s-img-c"><img src="./src/img/skills/html.webp" alt=""></div>
                     <div class="s-img-c">
@@ -83,67 +83,53 @@
                 </div>
             </div>
             <div class="next-section-2">
-                <h1>PROJECTS</h1>
-                <div class="p-container">
-                    <div class="project">
-                        <div class="p-c-img">
-                            <img src="./src/img/ui_img.jpg" alt="">
-                        </div>
-                        <div class="p-name">
-                            <p>Blog Website</p>
-                        </div>
+                <h1 id="projects-name">PROJECTS</h1>
+                <div class="p-container" >
+                    <div class="project-bar" id="projects">
                     </div>
-                    <div class="project">
-                        <div class="p-c-img">
-                            <img src="./src/img/ui_img.jpg" alt="">
-                        </div>
-                        <div class="p-name">
-                            <p>Blog Website</p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="p-c-img">
-                            <img src="./src/img/ui_img.jpg" alt="">
-                        </div>
-                        <div class="p-name">
-                            <p>Blog Website</p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="p-c-img">
-                            <img src="./src/img/ui_img.jpg" alt="">
-                        </div>
-                        <div class="p-name">
-                            <p>Blog Website</p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="p-c-img">
-                            <img src="./src/img/ui_img.jpg" alt="">
-                        </div>
-                        <div class="p-name">
-                            <p>Blog Website</p>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <div class="p-c-img">
-                            <img src="./src/img/ui_img.jpg" alt="">
-                        </div>
-                        <div class="p-name">
-                            <p>Blog Website</p>
-                        </div>
-                    </div>
-                    <div class="p-next">>></div>
-                    <div class="p-pre">
-                        <<< /div>
-                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
+
 </body>
 <script>
-    
+    const projects = [
+        {
+            "name": "BLOG WEBSITE",
+            "git": "https://github.com/Dipakjawkar/blog-website-v2",
+            "live": "https://blog-website-api-91b4.onrender.com/"
+        },
+        {
+            "name": "FILES UPLODING WEBSITE",
+            "git": "https://github.com/Dipakjawkar/Files-Uploading-Website",
+            "live": "NA"
+        },
+        {
+            "name": "REALTIME CHAT APP",
+            "git": "https://github.com/Dipakjawkar/realtime-chatapp",
+            "live": "NA"
+        },
+      
+       
+    ]
+
+    const projectsContainer = document.getElementById("projects");
+
+projects.forEach((project) => {
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("project");
+    newDiv.innerHTML = `
+        <div class="dot"></div>
+        <div class="p-info">
+            <h1>${project.name}</h1>
+            <p>GIT HUB : </p><a href="${project.git}">${project.git}</a>
+            <p>LIVE : </p><a href="${project.live}">${project.live}</a>
+        </div>
+    `;
+    projectsContainer.appendChild(newDiv);
+});
+
+
 </script>
 
 </html>

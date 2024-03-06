@@ -49,6 +49,30 @@ body{
   
 
 }
+
+#skills-name::before{
+    position: absolute;
+    content: "SKILLS";
+    color: rgba(240, 248, 255, 0.671);
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    opacity: 0.06;
+    top: 25%;
+    left: 50%;
+
+}
+
+#projects-name::before{
+    position: absolute;
+    content: "PROJECTS";
+    color: rgba(240, 248, 255, 0.671);
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    opacity: 0.06;
+    top: 25px;
+    left: 50%;
+}
+
 .u-p-info .u-name{
     font-size: 30px;
    
@@ -141,6 +165,7 @@ body{
     justify-content: center;
     flex-direction: column;
     margin-top: 300px;
+    position: relative;
 }
 
 .next-btn h1{
@@ -175,30 +200,7 @@ body{
     justify-content: center;
 }
 
-.p-c-img{
-    height: 150px;
-    width: 250px;
-    border-radius: 20px;
-   
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    filter: blur(2px) saturate(0.5);
-    transition: all 0.5s;
-   
 
-}
-
-.p-c-img:hover{
-    filter: blur(0) saturate(1);
-    
-
-
-}
-.p-c-img img{
-    width: 250px;
-}
 
 .lower{
     color: white;
@@ -211,6 +213,7 @@ body{
 
 
 .next-section-2{
+    position: relative;
     width: 100vw;
     margin-top: 20px;
     overflow: hidden;
@@ -225,47 +228,100 @@ body{
     padding: 9px;
 }
 
+.p-container{
+    width: 100vw;
+    position: relative;
+    left: 35%;
+}
 .project{
     position: relative;
+    padding: 10px;
+    margin: 20px 0;
+    width: max-content;
+    line-height: 15px;
+}
+.project-bar{
+    width: 3px;
+    background-color: #2a0310;
+    border-radius: 20px;
+    padding: 0 0 50px 0;
+    margin-bottom: 100px;
+}
+.p-info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px 20px;
+    /* background-color: #2a0310; */
+    border-radius: 10px;
+}
+.p-info p{
+    margin-top: 10px;
+}
+.p-info a{
+    font-size: 12px;
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: #180109;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    animation: dotAnimation 2s infinite alternate-reverse;
+    transition: all 2s;
+}
+.p-info ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-.p-name{
+.p-info ul li{
+    height: 20px;
+    width: 20px;
+    list-style: none;
+    margin: 10px;
+    
+
+}
+.p-info ul li img{
+    height: 50px;
+    margin: 10px;
+}
+
+@keyframes dotAnimation {
+    from{
+        height: 20px;
+        width: 20px;
+        left: -9px;
+    }
+    to{
+        height: 25px;
+        width: 25px;
+        left: -11px;
+        background-color: #fab1b4;
+    }
+}
+.dot::before{
     position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #2a0310;
+    border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/*  */
 
-.p-container{
-    position: relative;
-    display: flex;
-    overflow: scroll;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
+a{
+    text-decoration: none;
+    color: rgb(223, 148, 148);
 }
-.p-container::-webkit-scrollbar{
-    display: none;
-}
-.p-next{
-    background-color: #520204;
-    padding: 5px 7px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    right: -25%;
-    transform: translate(-50%, -50%);
-}
-.p-pre{
-    background-color: #520204;
-    padding: 5px 7px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    transform: translate(-50%, -50%);
-}
+
 
 @media screen and (max-width:715px) {
     .upper .bg-text{
@@ -305,6 +361,9 @@ body{
        
         margin-top: 200px;
     }
-    
+    .project{
+        scale: 0.7;
+        left: -55px;
+    }
     
 }
