@@ -292,6 +292,65 @@ body{
     margin: 10px;
 }
 
+.cards-project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 70vw;
+}
+.card p{
+    text-align: center;
+}
+.card a{
+    text-align: center;
+    padding: 10px 20px;
+}
+.card a span{
+    color: white;
+}
+.c-img-p{
+    height: 200px ;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.c-img-p img{
+    width: 400px;
+}
+.card{
+    background-color: #2a0310;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    width: 400px;
+    display: flex;
+   
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.card h1{
+    margin: 10px 0;
+    font-size: 25px;
+    text-align: center;
+}
+.skill-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+
+}
+
+.skill-p div{
+    padding: 10px 15px;
+    background-color: #520204;
+    border-radius: 20px;
+}
 @keyframes dotAnimation {
     from{
         height: 20px;
@@ -365,8 +424,8 @@ a{
         scale: 0.7;
         left: -55px;
     }
-
-     .p-container{
+    
+    .p-container{
         left: 20%;
     }
     

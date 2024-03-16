@@ -105,23 +105,34 @@
             </div>
         </div>
 
+     
+
+        
 </body>
 <script>
     const projects = [
         {
             "name": "BLOG WEBSITE",
+            "img": "./src/img/thumbnail/homepage_blogwebsite.jpg",
             "git": "https://github.com/Dipakjawkar/blog-website-v2",
-            "live": "https://blog-website-api-91b4.onrender.com/"
+            "live": "https://blog-website-api-91b4.onrender.com/",
+            "skills":["MERN",]
         },
         {
             "name": "FILES UPLODING WEBSITE",
+            "img":"./src/img/thumbnail/homepage_fileuploding.jpg",
             "git": "https://github.com/Dipakjawkar/Files-Uploading-Website",
-            "live": "https://files-uploading-website.onrender.com/"
+            "live": "https://files-uploading-website.onrender.com/",
+            "skills":["MERN", "MULTER"]
+
         },
         {
             "name": "REALTIME CHAT APP",
+            "img":"./src/img/thumbnail/homepage_chatapp.jpg",
             "git": "https://github.com/Dipakjawkar/realtime-chatapp",
-            "live": "https://realtime-chatapp-8vre.onrender.com/"
+            "live": "https://realtime-chatapp-8vre.onrender.com/",
+            "skills":["MERN", "SOCKET.IO"]
+
         },
 
 
@@ -135,9 +146,31 @@
         newDiv.innerHTML = `
         <div class="dot"></div>
         <div class="p-info">
-            <h1>${project.name}</h1>
-            <p>GIT HUB : </p><a href="${project.git}">${project.git}</a>
-            <p>LIVE : </p><a href="${project.live}">${project.live}</a>
+           
+            <div class="cards-project">
+                <div class="card">
+                    <div class="c-img-p">
+                        <img src="${project.img}" alt="">
+                    </div>
+                    <h1>${project.name}</h1>
+                    <div class="skill-p">
+                      
+                        ${
+                            project.skills.map((val)=>{
+                                return "<div>"+val+"</div>"
+                            }).join(" ")
+
+                        }
+                  
+                        <!-- <div>HTML</div>
+                        <div>CSS</div>
+                        <div>JavaScript</div> -->
+                    </div>
+                    <a href="${project.git}"><span >GIT HUB : </span> ${project.git}</a>
+                  <a href="${project.live}"><span >LIVE :  </span>  ${project.live}</a>
+                </div>
+            </div>
+           
         </div>
     `;
         projectsContainer.appendChild(newDiv);
