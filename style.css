@@ -15,6 +15,7 @@ body{
     justify-content: center;
     flex-direction: column;
     background-color: #180109;
+    overflow-x: hidden;
 }
 .contianer{
     min-height: 100vh;
@@ -422,11 +423,23 @@ a{
     }
     .project{
         scale: 0.7;
-        left: -55px;
+        left: -61px;
     }
     
     .p-container{
-        left: 13%;
+        left: 17%;
     }
     
+}
+
+footer{
+    height: 100px;
+    background-color: #25020e;
+    color: white;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+
 }
